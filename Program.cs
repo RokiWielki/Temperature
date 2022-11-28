@@ -10,7 +10,14 @@ namespace Temperature
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Write("Enter degrees Celsius: ");
+            double C = double.Parse(Console.ReadLine());
+            Console.WriteLine("Value in Fahrenheit: " + Farenheit(C));
+        }
+        static double Farenheit(double C)
+        {
+            double F = 32 + C * 9 / 5;
+            return F;
         }
     }
 }
